@@ -1,4 +1,8 @@
-//
+/*
+  Adejair Júnior <adejair.junioroulook@gmai.com>
+  # Tests C++/linkedList.h
+  # OBS: use -std=c++11 to compile this.
+*/
 
 #include <iostream>
 #include "../C++/linkedList.h"
@@ -14,35 +18,27 @@ typedef struct Staff {
 int main() {
   // Numbers
 
-  Node<int>* numbers = new Node<int>;
-  numbers->createList();
-
-  numbers->pushBackList(10);
-  numbers->pushFrontList(5);
-  numbers->pushBackList(20);
-
+  Node<int>* numbers = new Node<int>({10, 5, 15});
   numbers->showList();
 
   numbers->destroyList();
 
   // Using with struct
 
-  Node<Staff>* membersStaff = new Node<Staff>;
-  membersStaff->createList();
+  Node<Staff>* membersStaff = new Node<Staff>({{"Adejair Júnior", 69}, {"Mr Thug", 157}});
 
-  Staff myCompany[] = {{"Adejair Júnior", 69}, {"Mr Thug", 157}};
+  Node<Staff>* aux = *(membersStaff->getHead());
 
-  for(int i = 0; i != (sizeof(myCompany) / sizeof (Staff)); ++i)
-    membersStaff->pushBackList(myCompany[i]);
+  while(aux != NULL) {
+    cout << "NAME: " << aux->data.name << " AGE: " << aux->data.age << endl;
+    aux = aux->next;
+  }
 
-    Node<Staff>* aux = *(membersStaff->getHead());
+  cout << "SIZE: " << membersStaff->getSize() << endl;
 
-    while(aux != NULL) {
-      cout << "NAME: " << aux->data.name << " AGE: " << aux->data.age << endl;
-      aux = aux->next;
-    }
+  membersStaff->destroyList();
 
-    cout << "SIZE: " << membersStaff->getSize() << endl;
 
-    membersStaff->destroyList();
+
+
 }
