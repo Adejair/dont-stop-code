@@ -4,7 +4,7 @@
 
 - Fork this project.
 - Write your code.
-- Commit file with syntax : **LANGUAGE-USER-FILENAME :emoji:** _(e.g: Python-Adejair-sockets :art:)_
+- Commit file with syntax : **DESCRIPTION :emoji:** _(e.g: Adding python sockets :art:)_
 - Send pull request with same syntax of commit.
 -  Very Good, Tomorrow we see each other again :wink:
 
