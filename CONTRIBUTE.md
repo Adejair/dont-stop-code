@@ -24,4 +24,4 @@ Write your article the way you see fit, provided that it is consistent and bring
 #### <> Code :art:
 It is essential that you bring a good clean code and well-documented for it to be accepted.
 
-### > Thanks for watching to the end
+Thank's for your time :tada:
