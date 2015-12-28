@@ -12,7 +12,8 @@
 
 template<class A>
 class Node {
-  private:
+public:
+  //private:
     /*
       Responsible for loading id of list and your first element.
     */
@@ -29,14 +30,15 @@ class Node {
       Total length of the list.
     */
     int size;
-  public:
+  //public:
     Node<A>** createList(void);
+    Node<A>** getHead();
     void destroyList();
 
-    int pushBeginList(int);
-    int pushFrontList(int);
+    int pushBackList(A);
+    int pushFrontList(A);
 
-    int popList(int);
+    int popList(A);
 
     int getSize();
     int getPos(int);
@@ -54,6 +56,14 @@ Node<A>** Node<A>::createList(void) {
     if(linkedList != NULL)
       *linkedList = NULL;
     return linkedList;
+}
+
+/*
+  Get Head of Node.
+*/
+template<class A>
+Node<A>** Node<A>::getHead(void) {
+  return linkedList;
 }
 
 /*
@@ -77,7 +87,7 @@ void Node<A>::destroyList() {
   Insert the end of the beginning
 */
 template<class A>
-int Node<A>::pushBeginList(int value) {
+int Node<A>::pushBackList(A value) {
   Node<A>* node = new Node<A>;
 
   if(node == NULL || linkedList == NULL)
@@ -101,7 +111,7 @@ int Node<A>::pushBeginList(int value) {
   Inserts on the list start
 */
 template<class A>
-int Node<A>::pushFrontList(int value) {
+int Node<A>::pushFrontList(A value) {
   Node<A>* node = new Node<A>;
 
   if(node == NULL || linkedList == NULL)
@@ -156,7 +166,7 @@ void Node<A>::showList(void) {
   Remove certain value of list.
 */
 template<class A>
-int Node<A>::popList(int value) {
+int Node<A>::popList(A value) {
   Node<A>* node = (*linkedList);
   Node<A>* prev;
 
