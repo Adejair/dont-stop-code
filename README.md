@@ -1,6 +1,6 @@
 # > Don't stop code
 
-Don't stop code it is project for developers write useful code, algorithms, some new learning about any language.
+Don't stop code it is project for developers write useful code, algorithms, some new learning about any language, **everyday**
 
 ## > Ideia
 
@@ -8,7 +8,7 @@ This idea of this project came after watching [video](https://www.youtube.com/wa
 
 
 ## > How to contribute?
-Read document CONTRIBUTOR.md to understand the organization of this project so that you can have your code here.
+Read document [CONTRIBUTE.md](CONTRIBUTE.md) to understand the organization of this project so that you can have your code here.
 
 ## > CODE OF CONDUCT
 
