@@ -13,7 +13,6 @@
 template<class A>
 class Node {
 public:
-  //private:
     /*
       Responsible for loading id of list and your first element.
     */
@@ -30,7 +29,8 @@ public:
       Total length of the list.
     */
     int size;
-  //public:
+
+    // Prototype functions
     Node<A>** createList(void);
     Node<A>** getHead();
     void destroyList();
