@@ -38,7 +38,4 @@ int main() {
 
   membersStaff->destroyList();
 
-
-
-
 }
